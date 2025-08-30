@@ -37,7 +37,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     user_message = event.message.text
-    reply_text = f"「{user_message)」ですね！承知しました"
+    reply_text = f"「{user_message}」ですね！承知しました"
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply_text))
 
 
